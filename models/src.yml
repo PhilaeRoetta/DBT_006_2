@@ -1,0 +1,11 @@
+version: 2  # Required version indicator for dbt YAML files
+
+sources:
+  - name: DBT_PRJT  # The name of your source
+    database: DBT   # Database name
+    schema: DBT_006_2  # Schema name
+    tables:  # List of tables in the schema
+      - name: TODOCUSTOMER  # Alias for the table
+        identifier: CUSTOMERS  # Actual table name in the database
+      - name: TODOORDER  # Alias for the table
+        identifier: ORDERS  # Actual table name in the database
