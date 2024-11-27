@@ -3,7 +3,7 @@ with nborders as (
         C.CustomerID,
         C.FirstName,
         C.LastName,
-        COUNT(DISTINCT O.ORDERID)
+        COUNT(DISTINCT O.ORDERID) AS NB_ORDERS
     FROM
         {{ref("stg_customer")}} C
     LEFT JOIN
