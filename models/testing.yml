@@ -1,0 +1,14 @@
+models:
+  - name: customerrevenue
+    columns:
+      - name: PC_ORDER
+        tests:
+          - number_is_positive
+      - name: NB_ORDER
+        tests:
+          - number_is_positive
+  - name: nborders
+    columns:
+      - name: NB_ORDERS
+        tests:
+          - number_is_positive

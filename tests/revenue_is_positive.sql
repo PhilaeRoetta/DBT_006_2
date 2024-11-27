@@ -1,0 +1,1 @@
+SELECT * FROM {{ref('customerrevenue')}} WHERE PC_ORDER < 0
