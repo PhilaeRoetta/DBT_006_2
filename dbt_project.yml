@@ -39,4 +39,9 @@ models:
   DBT_006_2_PRJT:
     # Applies to all files under models/example/
     staging_models:
-      +materialized: table
+      materialized: ephemeral
+      stg_incr:
+        materialized: incremental
+        unique_key: INT1
+    fact_models:
+      materialized: view
