@@ -1,5 +1,6 @@
 models:
   - name: customerrevenue
+    description: "{{doc('list_custom')}}"
     columns:
       - name: PC_ORDER
         tests:
@@ -8,6 +9,7 @@ models:
         tests:
           - number_is_positive
   - name: nborders
+    description: the number of orders!!
     columns:
       - name: NB_ORDERS
         tests:
