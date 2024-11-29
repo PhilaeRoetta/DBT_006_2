@@ -1,6 +1,9 @@
 models:
   - name: customerrevenue
     description: "{{doc('list_custom')}}"
+    tests:
+      - dbt_utils.equality:
+          compare_model: ref('fact_expected')
     columns:
       - name: PC_ORDER
         tests:

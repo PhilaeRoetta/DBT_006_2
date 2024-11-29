@@ -4,8 +4,7 @@ with customerrevenue as (
         C.FirstName,
         C.LastName,
         COUNT(DISTINCT O.ORDERID) AS NB_ORDER,
-        SUM(OI.Quantity*OI.UnitPrice) AS PC_ORDER,
-        CE.CUSTOMER_EXPECTED
+        SUM(OI.Quantity*OI.UnitPrice) AS PC_ORDER
     FROM
         {{ref("stg_customer")}} C
     LEFT JOIN

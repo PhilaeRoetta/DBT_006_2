@@ -6,6 +6,9 @@ name: 'DBT_006_2_PRJT'
 version: '1.0.0'
 config-version: 2
 
+tests:
+  store_failures: true
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'default'
 
@@ -39,9 +42,9 @@ models:
   DBT_006_2_PRJT:
     # Applies to all files under models/example/
     staging_models:
-      materialized: ephemeral
+      materialized: view
       stg_incr:
         materialized: incremental
         unique_key: INT1
     fact_models:
-      materialized: view
+      materialized: table
