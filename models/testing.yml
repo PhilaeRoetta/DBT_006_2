@@ -5,9 +5,13 @@ models:
       - dbt_utils.equality:
           compare_model: ref('fact_expected')
     columns:
+      - name: CUSTOMER_ID
+        tests:
+          - not_null
       - name: PC_ORDER
         tests:
           - number_is_positive
+          - dbt_utils.at_least_one
       - name: NB_ORDER
         tests:
           - number_is_positive
