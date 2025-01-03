@@ -4,7 +4,7 @@ sources:
   - name: DBT_PRJT  # The name of your source
     description: the database!!!
     database: DBT   # Database name
-    schema: DBT_006_2  # Schema name
+    schema: DBT_006  # Schema name
     tables:  # List of tables in the schema
       - name: TODOCUSTOMER  # Alias for the table
         identifier: CUSTOMERS  # Actual table name in the database

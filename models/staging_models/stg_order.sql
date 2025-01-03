@@ -3,7 +3,7 @@ with orders as (
         OrderID,
         CustomerID
     FROM
-        DBT.DBT_006_2.ORDERS
+        DBT.DBT_006.ORDERS
 )
 
 SELECT * FROM orders
