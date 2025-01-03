@@ -6,7 +6,7 @@ with orderitem as (
         Quantity, 
         UnitPrice
     FROM
-        DBT.DBT_006_2.ORDERITEMS
+        DBT.DBT_006.ORDERITEMS
 )
 
 SELECT * FROM orderitem
