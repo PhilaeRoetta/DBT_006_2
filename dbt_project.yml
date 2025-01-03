@@ -46,5 +46,13 @@ models:
       stg_incr:
         materialized: incremental
         unique_key: INT1
+      stg_utils:
+        materialized: ephemeral
+      stg_incr_2:
+        materialized: incremental
+        unique_key: INT1
     fact_models:
       materialized: table
+      customerrevenue:
+        +required_tests: {"unique.*|not_null": 1}
+          
